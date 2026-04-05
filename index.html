@@ -80,7 +80,7 @@ h2 { font-family: var(--font-serif); font-size: clamp(32px, 5vw, 52px); line-hei
 .cm { color: rgba(0,0,0,0.35); font-style: italic; }
 
 /* TABS */
-.tabs-nav { display: flex; position: sticky; top: 0; z-index: 10; background: #fff; padding: 16px 0 0; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); }
+.tabs-nav { display: flex; flex-wrap: nowrap; position: sticky; top: 0; z-index: 10; background: #fff; padding: 16px 0 0; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tab-btn { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: none; border-bottom: 2px solid transparent; padding: 12px 24px 10px; cursor: pointer; color: var(--text-muted); margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; }
 .tab-btn:hover { color: var(--text); }
 .tab-btn.active { color: var(--text); border-bottom-color: var(--text); }
@@ -278,17 +278,39 @@ h2 { font-family: var(--font-serif); font-size: clamp(32px, 5vw, 52px); line-hei
   .container { padding: 0 20px; }
   section { padding: 48px 0; }
   .site-header { padding: 60px 0 40px; }
+  .site-header .lead { font-size: 17px; }
   .val-numbers { grid-template-columns: 1fr; }
   .takeaway { grid-template-columns: 52px 1fr; gap: 16px; }
   .takeaway-num { font-size: 40px; }
   .tab-btn { padding: 10px 14px 8px; font-size: 10px; }
   .takeaway.featured { margin: 0 -20px; padding: 32px 20px; }
+  .stat-main { font-size: 56px; }
+  .stat-num { font-size: 24px; }
+  .code-block { padding: 16px; font-size: 11px; }
+  .hl-line { margin: 0 -16px; padding: 0 16px; }
+  .step-body .step-code-block { padding: 12px 14px; font-size: 11px; }
+  .breaking-row { flex-direction: column; gap: 8px; }
+  .breaking-tag { align-self: flex-start; }
+  .tab-glance { font-size: 11px; line-height: 1.5; }
+  .warning-box { padding: 16px; }
+  .warning-box p { font-size: 13px; }
+  .spec-quote { padding: 12px 16px; font-size: 14px; }
+  .verdict { padding: 10px 14px; font-size: 13px; }
+  .val-num-block { padding: 20px 16px; }
+  .val-big-num { font-size: 36px; }
+  .timeline-option { padding: 12px 14px; font-size: 12px; }
+  .sovereignty-box p { font-size: 16px; }
+  .counter-body h3 { font-size: 18px; }
+  .corpus-text code { word-break: break-all; }
   .comparison-table { font-size: 12px; }
-  .comparison-table th, .comparison-table td { padding: 8px 8px; }
-  .comparison-table td:not(:first-child) { font-size: 11px; }
+  .comparison-table th, .comparison-table td { padding: 6px 6px; font-size: 11px; }
+  .comparison-table td:not(:first-child) { font-size: 10px; line-height: 1.5; text-align: left; }
+  .comparison-table td:first-child { font-size: 12px; }
+  .comparison-table td { word-break: break-word; }
   .scenario-table { font-size: 12px; }
-  .scenario-table th, .scenario-table td { padding: 8px 8px; }
-  .scenario-table td:not(:first-child) { font-size: 11px; }
+  .scenario-table th, .scenario-table td { padding: 6px 6px; font-size: 11px; }
+  .scenario-table td:not(:first-child) { font-size: 10px; line-height: 1.5; text-align: left; }
+  .scenario-table td { word-break: break-word; }
   .sovereignty-box { padding: 20px; }
   .chain-box { font-size: 11px; padding: 6px 10px; }
   .timeline-event { grid-template-columns: 1fr; gap: 8px; }
